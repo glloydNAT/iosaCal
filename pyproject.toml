@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = True
+envlist = py
+
+[testenv]
+deps =
+  pytest >= 6.0.0, <7
+  black == 23.10.0
+commands =
+  black iosacal --check --diff
+  black tests --check --diff
+  pytest
+"""

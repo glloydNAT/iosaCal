@@ -1,0 +1,135 @@
+=======================
+ What's new in IOSACal
+=======================
+
+The release changelog of IOSACal.
+
+Release 0.6 (2022-10-01)
+========================
+
+IOSACal 0.6 brings new features for simulating radiocarbon dates and
+obtaining quantiles, added respectively by Hythem Sidky and Roger
+Creel, who both contributed to IOSACal for the first time.
+
+The documentation has been updated substantially, and some pages are
+now generated directly from Jupyter notebooks, enabling a more direct
+approach for newcomers who can download the notebooks and start
+creating their own research notebooks.
+
+The demo web application was discontinued, and usage with MyBinder or
+Google Colab is now encouraged.
+
+The development process is now more solid, thanks to continuous
+integration based on Codeberg CI.
+
+- Fixed minor plotting issues (contributed by Hythem Sidky)
+- Add ability to simulate determinations (contributed by Hythem Sidky)
+- Introduce pre-commit (contributed by Stefano Costa)
+- Make the Python package PEP-517 and PEP-518 compatible, aka
+  pyproject.toml (contributed by Stefano Costa)
+- Added quantiles method to CalAge (contributed by Roger Creel)
+- Apply Black formatting (contributed by Stefano Costa)
+- Introduce Continuous Integration (CI) based on Codeberg CI and tox
+  (contributed by Stefano Costa)
+- Switch documentation theme to furo (contributed by Stefano Costa)
+- Convert some documentation pages to MyST-NB Jupyter notebooks
+  (contributed by Stefano Costa)
+
+Release 0.5.3 (2021-09-14)
+==========================
+
+A bugfix release.
+
+- fix a TabError that was introduced in the previous release
+  (contributed by Stefano Costa and Karl Håkansson)
+
+Release 0.5.2 (2021-08-01)
+==========================
+
+A bugfix release.
+
+- make the calibration curve data available in the distribution
+  packages
+- fixed problem with AD/BC plot missing the calibration curve
+  (contributed by Karl Håkansson)
+
+Version 0.5.1 was tagged without any changes from 0.5 described below.
+
+Release 0.5 (2021-07-28)
+========================
+
+This release brings the new IntCal20 calibration data and several
+improvements for different use cases, plus one important bug fix.
+
+- the project has moved to **Codeberg** for source code hosting and issue
+  tracking. The new Git repository is at
+  https://codeberg.org/steko/iosacal with a default branch name of
+  *main*
+- there is an official **Code of Conduct** that all contributors
+  (including the maintainter) will need to follow
+- the documentation has seen some improvements, in particular in the
+  *Contributing* section. Overall, making contributions easier from both
+  expert and novice users is a major theme in this release.
+- interactive use in Jupyter notebooks is made easier with
+  CalibrationCurve that can be created in many ways (such as loading
+  from an arbitrary file, or from a standard calibration curve called
+  by shorthand)
+- fixed a bug that made plots with AD/CE setting incorrect
+  (contributed by Karl Håkansson)
+- fixed a bug that caused a wrong plot density function for dates 80
+  BP to 0 BP (contributed by Karl Håkansson)
+- add IntCal20 calibration data (contributed by Wesley Weatherbee)
+
+On the technical side:
+
+- the command line interface is now based on the Click library
+- most code is now covered by tests, based on pytest
+- Python 3.6 or above required
+- requires Numpy 1.18 and Matplotlib 3.0
+
+
+Release 0.4 (released 2018-05-08)
+=================================
+
+The main highlight of this release are the new classes for summed probability
+distributions (SPD) and paleodemography, contributed by Mario Gutiérrez-Roig
+as part of his work for the PALEODEM_ project at IPHES_.
+
+.. _PALEODEM: http://paleodem.eu/
+.. _IPHES: http://www.iphes.cat/
+
+On the technical side:
+
+- requires NumPy 1.14, SciPy 1.1 and Matplotlib 2.2
+- removed dependencies on obsolete functions
+- improved the command line interface
+
+Release 0.3 (released 2016-04-15)
+=================================
+
+- use ``genfromtxt`` to import calibration curves
+- improved documentation
+- intervals as a well-defined type
+- restore AD/BC dates in both text and graphic output
+
+Release 0.2 (released 2014-02-14)
+=================================
+
+Main highlights:
+
+- new function to combine multiple determinations (Ward & Wilson 1978)
+- a simple and straightforward set of commands to get started
+- amazing interactive mode with IPython Notebook
+- plotting multiple dates in a stacked plot actually works
+- added several older calibration curves (useful to check published data)
+
+On the technical side:
+
+- works with Python 3 only, dropped compatibility with Python 2
+- requires NumPy 1.8 and Matplotlib 1.3
+- calibration curves and calibrated ages are ``ndarray`` objects, super-easy
+  to work with
+
+Known issues:
+
+- AD/BC dates in output are not available, all dates are given as CalBP

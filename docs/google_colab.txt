@@ -1,0 +1,19 @@
+.. _google_colab:
+
+====================================
+ How to use iosacal in Google Colab
+====================================
+
+Using iosacal in Google Colab is easy and effective.
+
+There is an example notebook on Google Colab, contributed by Jelmer Wind.
+
+The notebook is at https://colab.research.google.com/drive/10e1BpzR20MlLv5yfXpYW-1_twKC_igqh?usp=sharing
+
+You can copy the example notebook to your Google account and adapt it to your needs.
+
+The first command in the notebook must be the installation of iosacal:
+
+    !pip install iosacal
+
+After that, you can proceed with the import of iosacal and the writing of your notebook.

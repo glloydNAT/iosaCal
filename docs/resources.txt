@@ -1,0 +1,117 @@
+C14 and calibration resources
+=============================
+
+There are some interesting websites to learn about radiocarbon calibration and
+related topics. Some of them have been useful during the development of this
+software.
+
+Other software
+--------------
+
+- OxCal_ is developed by the Oxford Radiocarbon Accelerator Unit: it's
+  by far the most used calibration program
+- CALIB_ is a radiocarbon calibration program. A command-line Linux
+  version is available (non-free software, but works well)
+- BCal_ is an on-line Bayesian radiocarbon calibration tool hosted by
+  the Department of Probability and Statistics at the University of
+  Sheffield
+- ChronoModel_ is an open source application developed at CNRS for
+  constructing chronologies in archaeology in combining Events, Phases
+  and temporal constraints
+- the rcarbon_ open source package for R enables calibration and
+  analysis of radiocarbon dates and includes functions not only for
+  basic calibration, uncalibration, and plotting of one or more dates,
+  but also a statistical framework for building demographic and
+  related longitudinal inferences from aggregate radiocarbon date
+  lists
+- the BChron_ open source package for R enables quick calibration of
+  radiocarbon dates under various calibration curves (including user
+  generated ones), age-depth modelling, Relative Sea Level Rate
+  Estimation, and Non-Parametric Phase Modelling
+
+.. _OxCal: http://c14.arch.ox.ac.uk/oxcal.html
+.. _CALIB: http://calib.qub.ac.uk/calib/
+.. _BCal: http://bcal.shef.ac.uk/
+.. _ChronoModel: https://chronomodel.com/
+.. _rcarbon: https://github.com/ahb108/rcarbon
+.. _BChron: https://cran.r-project.org/package=Bchron
+
+Reference websites
+------------------
+
+- `Oxford Radiocarbon Accelerator Unit`_ contains a detailed explanation of how
+  to use C14 datings and how calibration_ works
+- Radiocarbon_ is the main international journal of record for research
+  articles and date lists relevant to 14C and other radioisotopes and
+  techniques used in archaeological, geophysical, oceanographic, and related
+  dating techniques
+- `radiocarbon WEB-info`_ provides online information concerning the
+  radiocarbon dating method
+
+.. _`Oxford Radiocarbon Accelerator Unit`: http://c14.arch.ox.ac.uk/
+.. _calibration: http://c14.arch.ox.ac.uk/calibration.html
+.. _Radiocarbon: http://radiocarbon.org/
+.. _`radiocarbon WEB-info`: http://www.c14dating.com/
+
+Calibration curves
+------------------
+
+Calibration curves are released in the public domain and can be
+downloaded in their native format, a slightly customised CSV, from the
+IntCal_ website.
+
+.. _IntCal: http://intcal.org/
+
+Please note that IOSACal already includes the calibration curves listed below:
+
+- *IntCal20*
+- *Marine20*
+- *ShCal20*
+- *IntCal13*
+- *Marine13*
+- *ShCal13*
+- *IntCal09*
+- *Marine09*
+- *IntCal04*
+- *Marine04*
+- *ShCal04*
+- *IntCal98*
+- *Marine98*
+
+IntCal20 and the associated Marine20 and ShCal20 curves are the latest
+calibration curves. Older calibration curves are useful to reproduce
+calibration results found in published literature.
+
+This is a short list of the published literature for the IntCal
+calibration data:
+
+- Heaton, T. J. et al. (2020) ‘MARINE20—THE MARINE RADIOCARBON AGE CALIBRATION CURVE (0–55,000 CAL BP)’, Radiocarbon, pp. 1–42. doi: 10.1017/RDC.2020.68.
+- Hogg, A. G. et al. (2013) ‘SHCal13 Southern Hemisphere Calibration, 0–50,000 Years cal BP’, Radiocarbon, 55(4), pp. 1889–1903.
+- Hogg, A. G. et al. (2020) ‘SHCal20 SOUTHERN HEMISPHERE CALIBRATION, 0–55,000 YEARS CAL BP’, Radiocarbon, pp. 1–20. doi: 10.1017/RDC.2020.59.
+- Hughen, K. A. et al. (2004) ‘Marine04 marine radiocarbon age calibration, 0-26 cal kyr BP.’, Radiocarbon, 46(3), pp. 1059–1086.
+- McCormac, F. G. et al. (2004) ‘SHCal04 Southern Hemisphere calibration, 0-11.0 cal kyr BP.’, Radiocarbon, 46(3), pp. 1087–1092.
+- Reimer, P. J. et al. (2004) ‘IntCal04 terrestrial radiocarbon age calibration, 0-26 cal kyr BP.’, Radiocarbon, 46(3), pp. 1029–1058.
+- Reimer, P. J. et al. (2009) ‘IntCal09 and Marine09 Radiocarbon Age Calibration Curves, 0-50,000 Years cal BP’, Radiocarbon, 51(4), pp. 1111–1150.
+- Reimer, P. J. et al. (2013) ‘IntCal13 and Marine13 Radiocarbon Age Calibration Curves 0–50,000 Years cal BP’, Radiocarbon, 55(4), pp. 1869–1887.
+- Reimer, P. J. et al. (2020) ‘THE INTCAL20 NORTHERN HEMISPHERE RADIOCARBON AGE CALIBRATION CURVE (0–55 CAL kBP)’, Radiocarbon, pp. 1–33. doi: 10.1017/RDC.2020.41.
+
+
+Radiocarbon databases
+---------------------
+
+There are a few databases of radiocarbon dates that are available as
+**open data**, and can be easily downloaded as CSV files for further processing.
+
+- `EUROEVOL <http://openarchaeologydata.metajnl.com/articles/10.5334/joad.40/>`_
+- `Mediterranean radiocarbon dates <http://crowdsourced.micropasts.org/project/MedRadiocarbon/>`_
+
+Both databases are useful to experiment with many dates and apart from
+their specific research aims and spatio-temporal coordinates, they are
+incredibly useful as a learning resource.
+
+Many more datasets are available through the c14bazAAR_ package for R.
+
+.. _c14bazAAR: https://docs.ropensci.org/c14bazAAR/
+
+Other databases are usually released under restrictive license terms
+or unavailable to the public.

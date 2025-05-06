@@ -1,0 +1,30 @@
+================================================
+ Research papers and case studies using iosacal
+================================================
+
+Citation
+--------
+
+To cite iosacal in publications use:
+
+Costa, S., Sidky, H., & Creel, R. (2022). IOSACal: v0.6.0 (0.6.0). Zenodo. https://doi.org/10.5281/zenodo.7133343
+
+Research papers using iosacal
+-----------------------------
+
+- Chaïd Saoudi, Yasmina, Badredine Sitouah, Fatiha Abdoun, Isabelle Sidéra, Kahina Roumane, and Saïda Kasri. “L’Alcéphale, l’Olivier, Le Culte Du Bœuf et Le Divertissement Chez Les Populations de l’Holocène Inférieur de Columnata (Algérie Nord-Occidentale). Résultats et Hypothèses Tirés Des Données Récentes.” Paléo, no. Hors-série (November 15, 2023): 244–64. https://doi.org/10.4000/paleo.8553.
+- Creel, Roger C., Jacqueline Austermann, Nicole S. Khan, William J. D’Andrea, Nicholas Balascio, Blake Dyer, Erica Ashe, and William Menke. 2022. “Postglacial Relative Sea Level Change in Norway.” Quaternary Science Reviews 282 (April): 107422. https://doi.org/10.1016/j.quascirev.2022.107422.
+- Fernández-López de Pablo, Javier, Mario Gutiérrez-Roig, Madalena Gómez-Puche, Rowan McLaughlin, Fabio Silva, and Sergi Lozano. 2019. “Palaeodemographic Modelling Supports a Population Bottleneck during the Pleistocene-Holocene Transition in Iberia.” Nature Communications 10 (1): 1872. https://doi.org/10.1038/s41467-019-09833-3.
+- Kirkinen, Tuija, Tytti Juhola, Olli Eranti, Teemu Väisänen, Johanna Seppä, and Vesa Laulumaa. 2023. “Combining Residue and Macroscopic Use-Wear Analysis of Quartz Objects in Kraakanmäki 3 Late Neolithic Settlement Site, Western Finland.” Fennoscandia Archaeologica, no. XL (October): 57–78. https://doi.org/10.61258/fa.130079
+- Larsson, Martin Na, Pedro Morell Miranda, Li Pan, Kıvılcım Başak Vural, Damla Kaptan, André Elias Rodrigues Soares, Hanna Kivikero, et al. 2023. “Ancient Sheep Genomes Reveal Four Millennia of North European Short-Tailed Sheep in the Baltic Sea Region.” Preprint. Evolutionary Biology. https://doi.org/10.1101/2023.06.26.544912; https://web.archive.org/web/20231022100638/https://www.biorxiv.org/content/10.1101/2023.06.26.544912v2.
+- Narbarte, Josu, Mattin Aiestaran, Aitor Pescador, Eneko Iriarte, Oihane Mendizabal Sandonís, Euken Alonso, Carlos Resa, and Juantxo Agirre Mauleon. 2022. “Los Perfiles Sedimentarios Del Yacimiento Arqueológico de Resa (Andosilla, Navarra).” Trabajos de Arqueología Navarra, no. 33 (September): 13–42. https://doi.org/10.35462/TAN33.1.
+- Nichols, Keir A., Dylan H. Rood, Ryan A. Venturelli, Greg Balco, Jonathan R. Adams, Louise Guillaume, Seth Campbell, et al. 2023. “Offshore-Onshore Record of Last Glacial Maximum−to−present Grounding Line Retreat at Pine Island Glacier, Antarctica.” Geology, August. https://doi.org/10.1130/G51326.1.
+- Unt, Agnes, Ragnar Saage, Kristo Oks, and Jüri Peets. “Excavations at the Tuiu Iron-Smelting Site, Saaremaa.” Arheoloogilised Välitööd Eestis/Archaeological Fieldwork in Estonia 2022 (2022): 99–106.
+- Von Arbin, Staffan. 2023. “The Recent Find of a Cog of ca. 1240 in the Fjällbacka Archipelago, Western Sweden: A Preliminary Report.” International Journal of Nautical Archaeology, May, 1–8. https://doi.org/10.1080/10572414.2023.2213440.
+
+Projects using iosacal
+----------------------
+
+- ANTARCTIC MARINE C-14 http://marine.antarctica.ice-d.org/
+- HOLSEA: Geographic variability of Holocene relative sea level https://www.holsea.org/ and https://inqua.org/commissions/cmp/projects/1601P
+- Thanados: Presentation frontend for archaeological data from OpenAtlas databases https://thanados.net/ and https://github.com/stefaneichert/thanados

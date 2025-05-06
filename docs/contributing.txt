@@ -1,0 +1,160 @@
+=========================
+ Contributing to IOSACal
+=========================
+
+
+Overview
+--------
+
+IOSACal is written in Python_ 3, and it makes heavy use of the NumPy_ library
+for the internal management of calibration curves and calibrated samples.
+Calibration curves, radiocarbon dates and calibrated curves are handled
+internally as ``ndarray`` objects. ``ndarray`` objects are matrices that can be
+easily manipulated through slicing, flipping, summing and other typical
+operations.
+
+Generation of plots is done through Matplotlib_, another Python
+library built on top of NumPy. Matplotlib can natively read
+``ndarray`` objects and plot them in a graphical form. Far from being
+just a set of plotting functions, Matplotlib allows the drawing of
+complex plots like those created by IOSACal.
+
+Development happens in a public git repository at Codeberg_, the free
+home for free projects. The default branch name is *main*.
+
+.. _Python: http://www.python.org/
+.. _NumPy: http://numpy.scipy.org/
+.. _Matplotlib: http://www.matplotlib.org/
+.. _Codeberg: https://codeberg.org/steko/iosacal
+
+Code of Conduct
+---------------
+
+All contributors to IOSACal are subject to the project's Code of Conduct, that is found in the root of the Git repository as ``CODE_OF_CONDUCT.md``.
+
+Please take some time to read it and understand how it regulates participation in the project.
+
+Codebase structure
+------------------
+
+The ``iosacal`` directory in the root of the Git repository is a
+Python package that contains the following source code files:
+
+* ``__init__.py`` is first of all there to declare that this directory
+  is a Python package. It also imports three objects (*R*, *combine*
+  and *iplot*) so that they can be imported directly from the root
+  package with ``from iosacal import R`` - that is enough to calibrate
+  a date when using a Python interpreter. And it contains the current
+  version that is propagated to other parts of the program.
+* ``cli.py`` contains the command line app, based on Click_
+* ``core.py`` contains the main classes to instantiate calibration
+  curves and radiocarbon determinations, and functions that work
+  directly on them like ``combine``
+* ``hpd.py`` contains functions to compute Highest Posterior Density
+  and helper classes to format the resulting confidence intervals
+* ``plot.py`` contains two large functions based on Matplotlib that
+  are respectively dedicated to plotting a single date or multiple
+  ("stacked") dates. The small ``iplot`` function is useful for usage
+  with Jupyter notebooks
+* ``spd.py`` contains functions and classes for working with Sum of
+  Probability Distributions of calibrated dates
+* ``text.py`` contains one function to format calibration results for
+  output to a terminal or a Markdown document
+* the ``data`` subdirectory contains the calibration curves in the
+  standard ``.14c`` format.
+
+Tests are in a separate directory called ``tests`` in the root of the
+Git repository. Each file corresponds to one of the modules listed
+above and has the name prefixed with ``test_``, such as
+``test_core.py``.
+
+Documentation is in the ``docs`` directory and is a collection of
+files in reStructured Text format, for use with Sphinx. There is also
+a file called ``.readthedocs.yaml`` in the root of the Git repository,
+that contains some settings for Read the Docs, the service that
+publishes the formatted documentation you are probably reading right
+now. If you're contributing changes to the source code, please always
+check that the documentation is updated and include relevant changes
+to the documentation as well.
+
+.. _Click: https://click.palletsprojects.com/
+
+Contributing
+------------
+
+Contributing to IOSACal can be done by suggesting improvements or
+pointing out bugs and limitations of the program. This kind of
+contribution works by opening a new *issue* at
+https://codeberg.org/steko/iosacal/issues . Please **always open a new
+issue** to let other contributors know that you're working on a specific
+problem.
+
+New commits should not be directly pushed to the main branch, but
+proposed for merging with a pull request. The pull request allows some
+discussion of the proposed changes among maintainers. The main branch
+is locked and can only be updated by merging other branches.
+
+Another related point is that commit messages should be as informative
+as possible. If a commit fixes a bug, there should be some description
+of the fixed bug. Each commit must be “atomic” and bring a
+self-contained change, not many unrelated edits (even to the same
+file).
+
+You will need Git to clone the repository on your development machine.
+However, if you're not familiar with Git or you don't want to open an
+account specifically for contributing, you can send the modified files
+by email or attach them to the issue.
+
+Coding guidelines
+-----------------
+
+All Python source **must** be formatted with black_ with the default settings,
+which makes formatting very straightforward:
+you just need to run it before committing your changes to git
+and all code is automatically adapted to the "standard" code style.
+
+Black can be run manually, but for regular contributors it is easier
+to run it automatically with pre-commit_.  Once pre-commit is
+installed, activate it for your local repository using the provided
+configuration file::
+
+    pre-commit install
+
+.. _black: https://black.readthedocs.io/en/stable/
+.. _pre-commit: https://pre-commit.com/
+
+Testing
+-------
+
+The tests in the ``tests`` directory are meant to be run **before committing your changes**.
+
+To run the tests you need ``pytest``: install it in a clean development environment and run::
+
+    pytest
+
+without any argument.
+If all goes well, a success message will greet you.
+If you see any failure, it means something you have changed causes IOSACal to behave abnormally.
+Please fix the errors before committing, if you need help open an issue.
+
+Interpolation
+-------------
+
+The *IntCal* calibration curves have a varying resolution.
+For example, in *IntCal09* data spacing changes from 5
+years for the range from 0 to 11.2 to cal kBP, 10 yrs for 11.2–15 cal
+kBP, 20 yrs for 15–25 cal kBP, 50 yrs for 25–40 cal kBP, and 100 yrs
+for 40–50 cal kBP [REI2009]_. Other curves follow a similar pattern.
+
+This means that the output intervals would follow these limitations. IOSACal
+uses the `interp` function of *NumPy* to perform linear interpolation of the
+calibration curves and obtain more fine-grained results, particularly concerning
+probability intervals.
+
+.. [REI2009] Reimer PJ, Baillie MGL, Bard E, Bayliss A, Beck JW, Blackwell PG,
+   Bronk Ramsey C, Buck CE, Burr GS, Edwards RL, Friedrich M, Grootes PM,
+   Guilderson TP, Hajdas I, Heaton TJ, Hogg AG, Hughen KA, Kaiser KF, Kromer B,
+   McCormac FG, Manning SW, Reimer RW, Richards DA, Southon JR, Talamo S,
+   Turney CSM, van der Plicht J, Weyhenmeyer CE. 2009. IntCal09 and Marine09
+   radiocarbon age calibration curves, 0–50,000 years cal BP. Radiocarbon
+   51(4):1111–50.

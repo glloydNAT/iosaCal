@@ -1,0 +1,27 @@
+.. _installation:
+
+==============
+ Installation
+==============
+
+The latest release of IOSACal is always available on PyPI.
+
+To run IOSACal on your local system you will need to have Python_ installed.
+
+.. note::
+
+    If you're not comfortable using the terminal, you may prefer running IOSACal in your browser with MyBinder_ or :ref:`google_colab`.
+
+.. _MyBinder: https://codeberg.org/steko/iosacal-mybinder
+
+Python is available for almost any operating system, including Linux, Windows and MacOS. Python may be already installed on your system.
+
+.. _Python: http://www.python.org/
+
+Once you have installed Python or checked that it is already installed, IOSACal can be installed into a new virtual environment as follows::
+
+    python -m venv iosacal_env
+    ./iosacal_env/bin/activate
+    python -m pip install iosacal
+
+After the install has completed, the ``iosacal`` command will be available from the command line.
